@@ -35,8 +35,14 @@ const netflix = () => {
             useContext hook is also being implemented for app-wide state
             management.
           </p>
-          <button className="px-8 py-2 mt-4 mr-8">Demo</button>
-          <button className="px-8 py-2 mt-4">Code</button>
+          <button className="px-8 py-2 mt-4 mr-8">
+            <a
+              href="https://github.com/JMAzer-dev/netflix-react"
+              target="_blank"
+            >
+              Code
+            </a>
+          </button>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">
@@ -65,9 +71,9 @@ const netflix = () => {
             </div>
           </div>
         </div>
-      <Link href='/#projects'>
-        <p className="underline cursor-pointer">Back</p>
-      </Link>  
+        <Link href="/#projects">
+          <p className="underline cursor-pointer">Back</p>
+        </Link>
       </div>
     </div>
   );

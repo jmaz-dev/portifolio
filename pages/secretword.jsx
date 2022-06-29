@@ -31,10 +31,17 @@ const netflix = () => {
             of programming logic was used to define a maximum number of
             attempts, letters already used and letters that were guessed from
             the word, game punctuation and finally the import of a database of
-            words in JSON. The useCallback hook was used to transform the JSON file data into two objects containing a word and a random category. 
+            words in JSON. The useCallback hook was used to transform the JSON
+            file data into two objects containing a word and a random category.
           </p>
-          <button className="px-8 py-2 mt-4 mr-8">Demo</button>
-          <button className="px-8 py-2 mt-4">Code</button>
+          <button className="px-8 py-2 mt-4 mr-8">
+            <a
+              href="https://github.com/JMAzer-dev/secretword-react"
+              target="_blank"
+            >
+              Code
+            </a>
+          </button>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">

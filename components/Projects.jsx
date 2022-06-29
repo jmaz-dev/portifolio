@@ -7,7 +7,7 @@ import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
   return (
-    <div  id="projects" className="w-full">
+    <div id="projects" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
         <p className="text-xl tracking-widest uppercase text-[#f07d12]">
           Projects
@@ -18,21 +18,25 @@ const Projects = () => {
             title="Netflix"
             backgroundImg={netflixImg}
             projectUrl="/netflix"
+            tech={"React.js"}
           />
           <ProjectItem
             title="MiniBlog"
             backgroundImg={miniBlogImg}
             projectUrl="/miniblog"
+            tech={"React.js"}
           />
           <ProjectItem
             title="Secret Word"
             backgroundImg={secretWordImg}
             projectUrl="/secretword"
+            tech={"React.js"}
           />
           <ProjectItem
             title="Cani Obras"
             backgroundImg={caniObrasImg}
             projectUrl="/caniiobras"
+            tech={"Next.js"}
           />
         </div>
       </div>

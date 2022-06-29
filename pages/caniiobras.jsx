@@ -18,7 +18,7 @@ const netflix = () => {
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
           <h2 className="py-2">Canii Obras</h2>
-          <h3>React JS / Tailwind / EmailJs</h3>
+          <h3>Next JS / Tailwind / EmailJs</h3>
         </div>
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
@@ -27,13 +27,19 @@ const netflix = () => {
           <h2>Overview</h2>
           <p>
             {" "}
-            I built this application in React JS. Initially it was a freelance
+            I built this application in Next JS. Initially it was a freelance
             job and I had to do it a little fast so I used some packages like
-            Swiper for a bealtiful and clean carousel, EmailJs for an complete email
-            sending service and React Router for the navigate routes. It has the responsive design using Tailwind.
+            Swiper for a bealtiful and clean carousel, EmailJs for an complete
+            email sending service. It has the responsive design using Tailwind.
           </p>
-          <button className="px-8 py-2 mt-4 mr-8">Demo</button>
-          <button className="px-8 py-2 mt-4">Code</button>
+          <button className="px-8 py-2 mt-4 mr-8">
+            <a
+              href="https://github.com/JMAzer-dev/caniiobras-next"
+              target="_blank"
+            >
+              Code
+            </a>
+          </button>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">
@@ -41,7 +47,7 @@ const netflix = () => {
             <div className="grid grid-cols-3 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" />
-                React
+                Next
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" />
