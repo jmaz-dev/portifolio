@@ -1,8 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
+
 
 const ProjectItem = ({ title, backgroundImg, projectUrl, tech }) => {
+  const { t } = useTranslation();
+
   return (
     <div>
       <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#da7b23] to-[#f1b073]">
@@ -18,7 +22,8 @@ const ProjectItem = ({ title, backgroundImg, projectUrl, tech }) => {
           <p className="pb-4 pt-2 text-white text-center">{tech}</p>
           <Link href={projectUrl}>
             <p className="text-center p-4 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
-              More Info
+            {t("home:more")}
+
             </p>
           </Link>
         </div>

@@ -7,8 +7,12 @@ import Link from "next/link";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import { useTranslation } from "next-i18next";
+
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -43,9 +47,10 @@ const Contact = () => {
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#f07d12]">
-          Contact
+        {t("home:contact")}
         </p>
-        <h2 className="py-4">Get In Touch</h2>
+        <h2 className="p-4 capitalize">        {t("home:touch")}
+</h2>
         <div className="grid lg:grid-cols-5 gap-8">
           {/*left */}
           <div className="col-span-3 lg:col-span-2 w-full shadow-xl shadow-gray-400 rounded-xl p-4">
@@ -60,15 +65,14 @@ const Contact = () => {
                 />
                 <div>
                   <h2 className="p-2">João Marcos Azeredo</h2>
-                  <p className="pl-2">Front-End Developer</p>
+                  <p className="pl-2">{t("home:front")}</p>
                   <p className="p-4">
-                    I am available for freelance or full-time positions. Contact
-                    me and let's talk.
+                  {t("home:available")}
                   </p>
                 </div>
               </div>
               <div>
-                <p className="uppercase pt-8">Connect With Me</p>
+                <p className="uppercase pt-8">{t("home:con")}</p>
                 <div className="flex items-center justify-between py-4 mt-8">
                   <a
                     href="https://www.linkedin.com/in/jmazeredo/"
@@ -104,7 +108,7 @@ const Contact = () => {
               <form ref={form} onSubmit={sendEmail}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
-                    <label className="uppecase text-sm py-2">Name</label>
+                    <label className="uppecase text-sm py-2">{t("home:name")}</label>
                     <input
                       className="border-2 p-3 rounded-lg flex border-gray-300"
                       type="text"
@@ -113,7 +117,7 @@ const Contact = () => {
                   </div>
                   <div className="flex flex-col">
                     <label className="uppecase text-sm py-2">
-                      Phone Number
+                    {t("home:phone")}
                     </label>
                     <input
                       className="border-2 p-3 rounded-lg flex border-gray-300"
@@ -123,7 +127,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppecase text-sm py-2">Email</label>
+                  <label className="uppecase text-sm py-2">{t("home:email")}</label>
                   <input
                     className="border-2 p-3 rounded-lg flex border-gray-300"
                     type="text"
@@ -131,7 +135,7 @@ const Contact = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppecase text-sm py-2">Subject</label>
+                  <label className="uppecase text-sm py-2">{t("home:subject")}</label>
                   <input
                     className="border-2 p-3 rounded-lg flex border-gray-300"
                     type="text"
@@ -139,7 +143,7 @@ const Contact = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppecase text-sm py-2">Message</label>
+                  <label className="uppecase text-sm py-2">{t("home:message")}</label>
                   <textarea
                     className="border-2 p-3 rounded-lg flex border-gray-300"
                     rows="8"
@@ -148,7 +152,7 @@ const Contact = () => {
                   />
                 </div>
                 <button className="w-full p-4 text-gray-100 mt-4">
-                  Send Message
+                {t("home:send")}
                 </button>
               </form>
             </div>

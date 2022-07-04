@@ -1,12 +1,20 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Link from "next/link";
 import * as Ai from "react-icons/ai";
 import * as Fa from "react-icons/fa";
 import * as Bs from "react-icons/bs";
+import * as Bi from "react-icons/bi";
 import { useRouter } from "next/router";
+import { I18nContext } from "next-i18next";
+import { useTranslation } from "next-i18next";
 
 const Navbar = () => {
+  const {
+    i18n: { language },
+  } = useContext(I18nContext);
+  const { t } = useTranslation();
+
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#ecf0f3");
@@ -15,6 +23,8 @@ const Navbar = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+
+  console.log(language);
 
   useEffect(() => {
     if (
@@ -42,6 +52,10 @@ const Navbar = () => {
     window.addEventListener("scroll", handleShaddow);
   }, []);
 
+
+
+
+  
   return (
     <div
       style={{ backgroundColor: `${navBg}` }}
@@ -62,27 +76,64 @@ const Navbar = () => {
         </Link>
         <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
           <Link href="/#home">
-            <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
+            <li className="ml-10 text-sm uppercase hover:border-b py-1">
+              Home
+            </li>
           </Link>{" "}
           <Link href="/#about">
-            <li className="ml-10 text-sm uppercase hover:border-b">About</li>
+            <li className="ml-10 text-sm uppercase hover:border-b py-1">
+            {t("home:about")}
+            </li>
           </Link>{" "}
           <Link href="/#skills">
-            <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
+            <li className="ml-10 text-sm uppercase hover:border-b py-1">
+            {t("home:skills")}
+            </li>
           </Link>{" "}
           <Link href="/#projects">
-            <li className="ml-10 text-sm uppercase hover:border-b">Projects</li>
+            <li className="ml-10 text-sm uppercase hover:border-b py-1">
+            {t("home:projects")}
+
+            </li>
           </Link>{" "}
           <Link href="/#contact">
-            <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
+            <li className="ml-10 text-sm uppercase hover:border-b py-1">
+            {t("home:contact")}
+            </li>
           </Link>
+          <li className="flex items-center font-medium ml-10 hover:text-teal-600">
+            <Bi.BiWorld />
+            <div
+              className="ml-1"
+              onClick={() =>
+                language === "en" ? router.push("/pt") : router.push("/en/")
+              }
+            >
+              <p className={language === "pt" ? "hidden" : ""}>PT</p>
+              <p className={language === "en" ? "hidden" : ""}>EN</p>
+            </div>
+          </li>
         </ul>
         <div
           style={{ color: `${linkColor}` }}
-          onClick={handleNav}
-          className="md:hidden"
+          className="md:hidden flex cursor-pointer"
         >
-          <Ai.AiOutlineMenu size={25} />
+          <div className="flex items-center font-medium mr-5 p-2 hover:text-teal-600">
+            <Bi.BiWorld />
+            <div
+              className="ml-1"
+              onClick={() =>
+                language === "en" ? router.push("/pt") : router.push("/en/")
+              }
+            >
+              <p className={language === "pt" ? "hidden" : ""}>PT</p>
+              <p className={language === "en" ? "hidden" : ""}>EN</p>
+            </div>
+          </div>
+
+          <div className="p-2 " onClick={handleNav}>
+            <Ai.AiOutlineMenu size={25} />
+          </div>
         </div>
       </div>
       <div
@@ -114,7 +165,8 @@ const Navbar = () => {
             </div>
             <div className="border-b border-gray-300 my-0">
               <p className="w-[85%] md:w-[90px] py-4">
-                Let's build some legendary together
+              {t("home:leg")}
+
               </p>
             </div>
           </div>
@@ -127,28 +179,32 @@ const Navbar = () => {
               </Link>{" "}
               <Link href="/#about">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  About
+                {t("home:about")}
+
                 </li>
               </Link>{" "}
               <Link href="/#skills">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Skills
+                {t("home:skills")}
+
                 </li>
               </Link>{" "}
               <Link href="/#projects">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Projects
+                {t("home:projects")}
+
                 </li>
               </Link>{" "}
               <Link href="/#contact">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Contact
+                {t("home:contact")}
+
                 </li>
               </Link>
             </ul>
             <div className="pt-40">
               <p className="uppercase tracking-widest text-[#f07d12]">
-                Let's Connect
+              {t("home:let_conn")}
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <a
