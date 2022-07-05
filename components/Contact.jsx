@@ -73,12 +73,13 @@ const Contact = () => {
                   <a
                     href="https://www.linkedin.com/in/jmazeredo/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaLinkedinIn className="text-[#f07d12]" />
                     </div>
                   </a>
-                  <a href="https://github.com/JMAzer-dev" target="_blank">
+                  <a href="https://github.com/JMAzer-dev" target="_blank" rel="noreferrer">
                     <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaGithub className="text-[#f07d12]" />
                     </div>

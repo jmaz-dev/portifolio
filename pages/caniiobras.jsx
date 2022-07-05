@@ -50,6 +50,7 @@ const netflix = (props) => {
             <a
               href="https://github.com/JMAzer-dev/caniiobras-next"
               target="_blank"
+              rel="noreferrer"
             >
               {t("home:code")}
             </a>

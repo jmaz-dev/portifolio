@@ -45,6 +45,7 @@ const netflix = () => {
             <a
               href="https://github.com/JMAzer-dev/secretword-react"
               target="_blank"
+              rel="noreferrer"
             >
               {t("home:code")}
             </a>

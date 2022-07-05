@@ -177,12 +177,13 @@ const Navbar = () => {
                 <a
                   href="https://www.linkedin.com/in/jmazeredo/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <Fa.FaLinkedinIn className="text-[#f07d12]" />
                   </div>
                 </a>
-                <a href="https://github.com/JMAzer-dev" target="_blank">
+                <a href="https://github.com/JMAzer-dev" target="_blank" rel="noreferrer">
                   <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <Fa.FaGithub className="text-[#f07d12]" />
                   </div>
