@@ -16,7 +16,7 @@ const Main = () => {
     <div id="home" className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
-          <div className="flex justify-center uppercase text-sm tracking-widest text-gray-700">
+          <div className="flex sm:text-sm justify-center uppercase text-xs tracking-widest text-gray-700">
             <p className="">{t("home:lets_build")}</p>
             <div className={language === "pt" ? "hidden" : ""}>
               <ReactTyped
@@ -44,7 +44,7 @@ const Main = () => {
                 loop
               />{" "}
             </div>
-            <span className="ml-1">{t("home:together")}</span>
+            <p className="ml-1">{t("home:together")}</p>
           </div>
           <h1 className="py-4 text-gray-700">
             {t("home:hi")}
@@ -55,12 +55,20 @@ const Main = () => {
             {t("home:minindex")}
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-            <a href="https://www.linkedin.com/in/jmazeredo/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/jmazeredo/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="rounded-full shadow-lg shadow-gray-500 bg-[#f07d12] p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <FaLinkedinIn className="text-white" />
               </div>
             </a>
-            <a href="https://github.com/JMAzer-dev" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/JMAzer-dev"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="rounded-full shadow-lg shadow-gray-500 bg-[#f07d12] p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <FaGithub className="text-white" />
               </div>

@@ -169,7 +169,7 @@ const Navbar = () => {
                 </li>
               </Link>
             </ul>
-            <div className="pt-40">
+            <div className="pt-32">
               <p className="uppercase tracking-widest text-[#f07d12]">
                 {t("home:let_conn")}
               </p>
