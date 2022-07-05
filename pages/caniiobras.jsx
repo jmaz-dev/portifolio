@@ -7,7 +7,7 @@ import projectImg from "../public/assets/projects/caniobras.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 //i18n
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import { i18n } from "next-i18next";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -19,7 +19,6 @@ export async function getStaticProps({ locale }) {
 
 
 const netflix = (props) => {
-  const { t } = useTranslation();
 
   return (
     <div className="w-full">
@@ -41,10 +40,10 @@ const netflix = (props) => {
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
         {/* resume */}
         <div className="col-span-4">
-          <p>{t("home:project")}</p>
-          <h2 className="p-4">{t("home:over")}</h2>
+          <p>{i18n.t("home:project")}</p>
+          <h2 className="p-4">{i18n.t("home:over")}</h2>
           <p className="p-2">
-            {t("home:cani")}
+            {i18n.t("home:cani")}
           </p>
           <button className="px-8 py-2 mt-4 mr-8">
             <a
@@ -52,14 +51,14 @@ const netflix = (props) => {
               target="_blank"
               rel="noreferrer"
             >
-              {t("home:code")}
+              {i18n.t("home:code")}
             </a>
           </button>
         </div>
         {/* tech */}
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">
-            <p className="text-center font-bold pb-2">{t("home:tech")}</p>
+            <p className="text-center font-bold pb-2">{i18n.t("home:tech")}</p>
             <div className="grid grid-cols-3 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" />
@@ -85,7 +84,7 @@ const netflix = (props) => {
           </div>
         </div>
         <Link href="/#projects">
-          <p className="underline cursor-pointer">{t("home:back")}</p>
+          <p className="underline cursor-pointer">{i18n.t("home:back")}</p>
         </Link>
       </div>
     </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import AboutIMG from "../public/assets/about.jpg";
+import Image from "next/dist/client/image";
 
 const About = () => {
   const { t } = useTranslation();
@@ -13,7 +15,7 @@ const About = () => {
             {t("home:about")}
           </p>
           <h2 className="p-4 capitalize">{t("home:who")}</h2>
-          <p className="p-2 text-gray-600">// {t("home:normal")}</p>
+          <p className="p-2 text-gray-600">&raquo; {t("home:normal")}</p>
           <p className="p-2 text-gray-600">{t("home:resume")}</p>
           <Link href="/#projects">
             <p className="py-2 text-gray-600 underline cursor-pointer">
@@ -22,7 +24,7 @@ const About = () => {
           </Link>
         </div>
         <div className="w-ful h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-          <img className="rounded-xl" src="/../assets/about.jpg" alt="" />
+          <Image className="rounded-xl" src={AboutIMG} alt="about"  />
         </div>
       </div>
     </div>

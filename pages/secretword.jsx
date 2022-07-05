@@ -4,7 +4,7 @@ import projectImg from "../public/assets/projects/secretword.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import { i18n } from "next-i18next";
 
 
 export async function getStaticProps({ locale }) {
@@ -16,7 +16,6 @@ export async function getStaticProps({ locale }) {
 }
 
 const netflix = () => {
-  const { t } = useTranslation();
 
   return (
     <div className="w-full">
@@ -36,10 +35,10 @@ const netflix = () => {
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
         <div className="col-span-4">
-          <p>{t("home:project")}</p>
-          <h2 className="p-4">{t("home:over")}</h2>
+          <p>{i18n.t("home:project")}</p>
+          <h2 className="p-4">{i18n.t("home:over")}</h2>
           <p className="p-2">
-          {t("home:secret_w")}
+          {i18n.t("home:secret_w")}
           </p>
           <button className="px-8 py-2 mt-4 mr-8">
             <a
@@ -47,13 +46,13 @@ const netflix = () => {
               target="_blank"
               rel="noreferrer"
             >
-              {t("home:code")}
+              {i18n.t("home:code")}
             </a>
           </button>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">
-            <p className="text-center font-bold pb-2">{t("home:tech")}</p>
+            <p className="text-center font-bold pb-2">{i18n.t("home:tech")}</p>
             <div className="grid grid-cols-3 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" />
@@ -79,7 +78,7 @@ const netflix = () => {
           </div>
         </div>
         <Link href="/#projects">
-          <p className="underline cursor-pointer">{t("home:back")}</p>
+          <p className="underline cursor-pointer">{i18n.t("home:back")}</p>
         </Link>
       </div>
     </div>
