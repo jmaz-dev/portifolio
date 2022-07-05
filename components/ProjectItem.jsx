@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
-
 const ProjectItem = ({ title, backgroundImg, projectUrl, tech }) => {
   const { t } = useTranslation();
 
@@ -22,8 +21,7 @@ const ProjectItem = ({ title, backgroundImg, projectUrl, tech }) => {
           <p className="pb-4 pt-2 text-white text-center">{tech}</p>
           <Link href={projectUrl}>
             <p className="text-center p-4 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
-            {t("home:more")}
-
+              {t("home:more")}
             </p>
           </Link>
         </div>

@@ -6,7 +6,6 @@ import caniObrasImg from "../public/assets/projects/caniobras.png";
 import ProjectItem from "./ProjectItem";
 import { useTranslation } from "next-i18next";
 
-
 const Projects = () => {
   const { t } = useTranslation();
 
@@ -16,8 +15,7 @@ const Projects = () => {
         <p className="text-xl tracking-widest uppercase text-[#f07d12]">
           {t("home:projects")}
         </p>
-        <h2 className="p-4 capitalize">          {t("home:i_build")}
-</h2>
+        <h2 className="p-4 capitalize"> {t("home:i_build")}</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
             title="Netflix"

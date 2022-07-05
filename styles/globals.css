@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 @layer base {
@@ -11,23 +11,32 @@ html {
     @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
   }
 
-  h1, h2, h3, h4, h5, h6{
-    @apply font-bold
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
   }
 
-  h1{
-    @apply text-4xl sm:text-5xl md:text-6xl
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
   }
 
-  h2{
-    @apply text-3xl sm:text-4xl
+  h2 {
+    @apply text-3xl sm:text-4xl;
   }
 
-  li{
-    @apply cursor-pointer
+  li {
+    @apply cursor-pointer;
   }
 
-  button{
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#da7b23] to-[#f1b073] text-white
+  button {
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#da7b23] to-[#f1b073] text-white;
   }
+}
+
+input[type="checkbox"] {
+  @apply hidden;
 }

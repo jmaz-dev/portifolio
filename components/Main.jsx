@@ -44,7 +44,7 @@ const Main = () => {
                 loop
               />{" "}
             </div>
-            <span>{t("home:together")}</span>
+            <span className="ml-1">{t("home:together")}</span>
           </div>
           <h1 className="py-4 text-gray-700">
             {t("home:hi")}
@@ -52,7 +52,7 @@ const Main = () => {
           </h1>
           <h1 className="py-2 text-gray-700"> {t("home:frontend")}</h1>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
-          {t("home:minindex")}
+            {t("home:minindex")}
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <a href="https://www.linkedin.com/in/jmazeredo/" target="_blank">

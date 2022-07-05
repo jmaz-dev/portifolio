@@ -1,30 +1,25 @@
 import Image from "next/image";
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import * as Ai from "react-icons/ai";
 import * as Fa from "react-icons/fa";
 import * as Bs from "react-icons/bs";
-import * as Bi from "react-icons/bi";
 import { useRouter } from "next/router";
-import { I18nContext } from "next-i18next";
 import { useTranslation } from "next-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
-  const {
-    i18n: { language },
-  } = useContext(I18nContext);
   const { t } = useTranslation();
 
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#ecf0f3");
   const [linkColor, setLinkColor] = useState("#1f2937");
+  const [lang, setLang] = useState("visible");
   const router = useRouter();
   const handleNav = () => {
     setNav(!nav);
   };
-
-  console.log(language);
 
   useEffect(() => {
     if (
@@ -33,9 +28,11 @@ const Navbar = () => {
       router.asPath === "/miniblog" ||
       router.asPath === "/secretword"
     ) {
+      setLang("none");
       setNavBg("transparent");
       setLinkColor("#ecf0f3");
     } else {
+      setLang('visible')
       setNavBg("#ecf0f3");
       setLinkColor("#1f2937");
     }
@@ -52,10 +49,6 @@ const Navbar = () => {
     window.addEventListener("scroll", handleShaddow);
   }, []);
 
-
-
-
-  
   return (
     <div
       style={{ backgroundColor: `${navBg}` }}
@@ -65,7 +58,7 @@ const Navbar = () => {
           : "fixed w-full h-20 z-[100]"
       }
     >
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+      <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         <Link href="/">
           <Image
             src="/../public/assets/logosm.png"
@@ -76,59 +69,40 @@ const Navbar = () => {
         </Link>
         <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
           <Link href="/#home">
-            <li className="ml-10 text-sm uppercase hover:border-b py-1">
+            <li className="ml-10 text-sm uppercase hover:text-gray-400 duration-300 py-1">
               Home
             </li>
           </Link>{" "}
           <Link href="/#about">
-            <li className="ml-10 text-sm uppercase hover:border-b py-1">
-            {t("home:about")}
+            <li className="ml-10 text-sm uppercase hover:text-gray-400 duration-300  py-1">
+              {t("home:about")}
             </li>
           </Link>{" "}
           <Link href="/#skills">
-            <li className="ml-10 text-sm uppercase hover:border-b py-1">
-            {t("home:skills")}
+            <li className="ml-10 text-sm uppercase hover:text-gray-400 duration-300  py-1">
+              {t("home:skills")}
             </li>
           </Link>{" "}
           <Link href="/#projects">
-            <li className="ml-10 text-sm uppercase hover:border-b py-1">
-            {t("home:projects")}
-
+            <li className="ml-10 text-sm uppercase hover:text-gray-400 duration-300  py-1">
+              {t("home:projects")}
             </li>
           </Link>{" "}
           <Link href="/#contact">
-            <li className="ml-10 text-sm uppercase hover:border-b py-1">
-            {t("home:contact")}
+            <li className="ml-10 text-sm uppercase hover:text-gray-400 duration-300  py-1">
+              {t("home:contact")}
             </li>
           </Link>
-          <li className="flex items-center font-medium ml-10 hover:text-teal-600">
-            <Bi.BiWorld />
-            <div
-              className="ml-1"
-              onClick={() =>
-                language === "en" ? router.push("/pt") : router.push("/en/")
-              }
-            >
-              <p className={language === "pt" ? "hidden" : ""}>PT</p>
-              <p className={language === "en" ? "hidden" : ""}>EN</p>
-            </div>
+          <li style={{ display: `${lang}` }} className="flex items-center ml-8">
+            <LanguageSwitcher />
           </li>
         </ul>
         <div
           style={{ color: `${linkColor}` }}
           className="md:hidden flex cursor-pointer"
         >
-          <div className="flex items-center font-medium mr-5 p-2 hover:text-teal-600">
-            <Bi.BiWorld />
-            <div
-              className="ml-1"
-              onClick={() =>
-                language === "en" ? router.push("/pt") : router.push("/en/")
-              }
-            >
-              <p className={language === "pt" ? "hidden" : ""}>PT</p>
-              <p className={language === "en" ? "hidden" : ""}>EN</p>
-            </div>
+          <div style={{ display: `${lang}` }} className="mr-5 p-2">
+            <LanguageSwitcher />
           </div>
 
           <div className="p-2 " onClick={handleNav}>
@@ -164,10 +138,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="border-b border-gray-300 my-0">
-              <p className="w-[85%] md:w-[90px] py-4">
-              {t("home:leg")}
-
-              </p>
+              <p className="w-[85%] md:w-[90px] py-4">{t("home:leg")}</p>
             </div>
           </div>
           <div className="py-4 flex flex-col">
@@ -179,32 +150,28 @@ const Navbar = () => {
               </Link>{" "}
               <Link href="/#about">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                {t("home:about")}
-
+                  {t("home:about")}
                 </li>
               </Link>{" "}
               <Link href="/#skills">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                {t("home:skills")}
-
+                  {t("home:skills")}
                 </li>
               </Link>{" "}
               <Link href="/#projects">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                {t("home:projects")}
-
+                  {t("home:projects")}
                 </li>
               </Link>{" "}
               <Link href="/#contact">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                {t("home:contact")}
-
+                  {t("home:contact")}
                 </li>
               </Link>
             </ul>
             <div className="pt-40">
               <p className="uppercase tracking-widest text-[#f07d12]">
-              {t("home:let_conn")}
+                {t("home:let_conn")}
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <a

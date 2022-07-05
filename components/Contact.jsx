@@ -9,7 +9,6 @@ import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { useTranslation } from "next-i18next";
 
-
 const Contact = () => {
   const { t } = useTranslation();
 
@@ -47,10 +46,9 @@ const Contact = () => {
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#f07d12]">
-        {t("home:contact")}
+          {t("home:contact")}
         </p>
-        <h2 className="p-4 capitalize">        {t("home:touch")}
-</h2>
+        <h2 className="p-4 capitalize"> {t("home:touch")}</h2>
         <div className="grid lg:grid-cols-5 gap-8">
           {/*left */}
           <div className="col-span-3 lg:col-span-2 w-full shadow-xl shadow-gray-400 rounded-xl p-4">
@@ -66,9 +64,7 @@ const Contact = () => {
                 <div>
                   <h2 className="p-2">João Marcos Azeredo</h2>
                   <p className="pl-2">{t("home:front")}</p>
-                  <p className="p-4">
-                  {t("home:available")}
-                  </p>
+                  <p className="p-4">{t("home:available")}</p>
                 </div>
               </div>
               <div>
@@ -108,7 +104,9 @@ const Contact = () => {
               <form ref={form} onSubmit={sendEmail}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
-                    <label className="uppecase text-sm py-2">{t("home:name")}</label>
+                    <label className="uppecase text-sm py-2">
+                      {t("home:name")}
+                    </label>
                     <input
                       className="border-2 p-3 rounded-lg flex border-gray-300"
                       type="text"
@@ -117,7 +115,7 @@ const Contact = () => {
                   </div>
                   <div className="flex flex-col">
                     <label className="uppecase text-sm py-2">
-                    {t("home:phone")}
+                      {t("home:phone")}
                     </label>
                     <input
                       className="border-2 p-3 rounded-lg flex border-gray-300"
@@ -127,7 +125,9 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppecase text-sm py-2">{t("home:email")}</label>
+                  <label className="uppecase text-sm py-2">
+                    {t("home:email")}
+                  </label>
                   <input
                     className="border-2 p-3 rounded-lg flex border-gray-300"
                     type="text"
@@ -135,7 +135,9 @@ const Contact = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppecase text-sm py-2">{t("home:subject")}</label>
+                  <label className="uppecase text-sm py-2">
+                    {t("home:subject")}
+                  </label>
                   <input
                     className="border-2 p-3 rounded-lg flex border-gray-300"
                     type="text"
@@ -143,7 +145,9 @@ const Contact = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppecase text-sm py-2">{t("home:message")}</label>
+                  <label className="uppecase text-sm py-2">
+                    {t("home:message")}
+                  </label>
                   <textarea
                     className="border-2 p-3 rounded-lg flex border-gray-300"
                     rows="8"
@@ -152,7 +156,7 @@ const Contact = () => {
                   />
                 </div>
                 <button className="w-full p-4 text-gray-100 mt-4">
-                {t("home:send")}
+                  {t("home:send")}
                 </button>
               </form>
             </div>
