@@ -29,9 +29,12 @@
   "secret_w": "Eu construí este aplicativo em React JS. Muita lógica de programação foi usada para definir um número máximo de tentativas, letras já utilizadas e letras que foram adivinhadas a partir da palavra, a pontuação do jogo, e por fim a importação de um banco de dados de palavras em JSON. O hook useCallback foi utilizado para monitorar os dados do arquivo JSON impedindo a renderização e atravez de um loop, transformar os dados em dois objetos contendo uma palavra e uma categoria aleatória.",
   "send": "Enviar Mensagem",
   "skills": "Habilidades",
-  "subject": "sujeito",
+  "subject": "Assunto",
   "tech": "Tecnologias",
   "together": "juntos",
   "touch": "Entrar em contato",
-  "who": "Quem eu sou"
+  "who": "Quem eu sou",
+  "leg": "Vamos contruir algo grande juntos",
+  "let_conn": "Conecte-se comigo"
+
 }

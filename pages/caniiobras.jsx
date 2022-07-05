@@ -1,8 +1,11 @@
-import Image from "next/image";
-import React from "react";
-import projectImg from "../public/assets/projects/caniobras.png";
-import { RiRadioButtonFill } from "react-icons/ri";
+//next
 import Link from "next/link";
+import Image from "next/image";
+//assets
+import projectImg from "../public/assets/projects/caniobras.png";
+//icons
+import { RiRadioButtonFill } from "react-icons/ri";
+//i18n
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
@@ -20,6 +23,7 @@ const netflix = (props) => {
 
   return (
     <div className="w-full">
+      {/* background image container */}
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
@@ -35,6 +39,7 @@ const netflix = (props) => {
         </div>
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
+        {/* resume */}
         <div className="col-span-4">
           <p>{t("home:project")}</p>
           <h2 className="p-4">{t("home:over")}</h2>
@@ -50,6 +55,7 @@ const netflix = (props) => {
             </a>
           </button>
         </div>
+        {/* tech */}
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">
             <p className="text-center font-bold pb-2">{t("home:tech")}</p>

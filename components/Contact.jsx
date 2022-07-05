@@ -68,7 +68,7 @@ const Contact = () => {
                 </div>
               </div>
               <div>
-                <p className="uppercase pt-8">{t("home:con")}</p>
+                <p className="uppercase pt-8 text-[#f07d12]">{t("home:con")}</p>
                 <div className="flex items-center justify-between py-4 mt-8">
                   <a
                     href="https://www.linkedin.com/in/jmazeredo/"
