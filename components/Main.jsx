@@ -16,9 +16,10 @@ const Main = () => {
     <div id="home" className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
-          <div className="flex sm:text-sm justify-center uppercase text-xs tracking-widest text-gray-700">
+          <div className="sm:flex sm:text-sm justify-center uppercase text-xs tracking-widest text-gray-700">
+            <div className={language === "pt" ? "hidden" : "flex text-center justify-center"}>
             <p className="">{t("home:lets_build")}</p>
-            <div className={language === "pt" ? "hidden" : ""}>
+
               <ReactTyped
                 className="font-bold md:pl-2 pl-1 text-[#f07d12]"
                 strings={[
@@ -31,7 +32,9 @@ const Main = () => {
                 loop
               />{" "}
             </div>
-            <div className={language === "pt" ? "" : "hidden"}>
+            <div className={language === "pt" ? "flex text-center justify-center" : "hidden"}>
+            <p className="">{t("home:lets_build")}</p>
+
               <ReactTyped
                 className="font-bold md:pl-2 pl-1 text-[#f07d12]"
                 strings={[

@@ -60,10 +60,6 @@ const netflix = () => {
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" />
-                Programming Logic
-              </p>
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" />
                 Javascript
               </p>
               <p className="text-gray-600 py-2 flex items-center">

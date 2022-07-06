@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import AboutIMG from "../public/assets/about.jpg";
-import Image from "next/dist/client/image";
+import Image from "next/image";
 
 const About = () => {
   const { t } = useTranslation();

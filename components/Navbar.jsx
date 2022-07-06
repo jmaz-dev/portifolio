@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LogoImg from "../public/assets/logosm.png"
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import * as Ai from "react-icons/ai";
@@ -61,7 +62,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         <Link href="/">
           <Image
-            src="/../public/assets/logosm.png"
+            src={LogoImg}
             alt="/"
             width="150"
             height="150"
@@ -125,7 +126,7 @@ const Navbar = () => {
           <div>
             <div className="flex w-full justify-between items-center">
               <Image
-                src="/../public/assets/logosm.png"
+                src={LogoImg}
                 alt="/"
                 width="100"
                 height="100"
