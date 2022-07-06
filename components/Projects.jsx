@@ -1,9 +1,11 @@
-import React from "react";
+//assets
 import netflixImg from "../public/assets/projects/netflix.jpg";
 import miniBlogImg from "../public/assets/projects/miniblog.png";
 import secretWordImg from "../public/assets/projects/secretword.png";
 import caniObrasImg from "../public/assets/projects/caniobras.png";
+//components
 import ProjectItem from "./ProjectItem";
+//i18n
 import { useTranslation } from "next-i18next";
 
 const Projects = () => {

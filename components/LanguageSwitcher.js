@@ -1,7 +1,10 @@
-import { useContext } from "react";
-import { I18nContext } from "next-i18next";
-import * as Bi from "react-icons/bi";
+//next_react
 import { useRouter } from "next/router";
+import { useContext } from "react";
+//icons
+import * as Bi from "react-icons/bi";
+//i18n
+import { I18nContext } from "next-i18next";
 
 function LanguageSwitcher() {
   const router = useRouter();
@@ -12,9 +15,13 @@ function LanguageSwitcher() {
   return (
     <>
       <div className="font-medium hover:text-teal-600 duration-300">
-        <label className={language === "pt" ? "hidden" : "flex items-center cursor-pointer"}>
+        <label
+          className={
+            language === "pt" ? "hidden" : "flex items-center cursor-pointer"
+          }
+        >
           <Bi.BiWorld className="mr-1" />
-          
+
           <input
             type="button"
             onClick={() =>
@@ -26,9 +33,13 @@ function LanguageSwitcher() {
         </label>
       </div>
       <div className="font-medium hover:text-teal-600 duration-300">
-        <label className={language === "en" ? "hidden" : "flex items-center cursor-pointer"}>
-          <Bi.BiWorld className="mr-1"/>
-          
+        <label
+          className={
+            language === "en" ? "hidden" : "flex items-center cursor-pointer"
+          }
+        >
+          <Bi.BiWorld className="mr-1" />
+
           <input
             type="button"
             value="EN"

@@ -1,13 +1,19 @@
-import Image from "next/image";
-import LogoImg from "../public/assets/logosm.png"
+//react
 import React, { useEffect, useState } from "react";
+//next
+import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
+//components
+import LanguageSwitcher from "./LanguageSwitcher";
+//assets
+import LogoImg from "../public/assets/logosm.png";
+//icons
 import * as Ai from "react-icons/ai";
 import * as Fa from "react-icons/fa";
 import * as Bs from "react-icons/bs";
-import { useRouter } from "next/router";
+//i18n
 import { useTranslation } from "next-i18next";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -33,7 +39,7 @@ const Navbar = () => {
       setNavBg("transparent");
       setLinkColor("#ecf0f3");
     } else {
-      setLang('visible')
+      setLang("visible");
       setNavBg("#ecf0f3");
       setLinkColor("#1f2937");
     }
@@ -61,12 +67,7 @@ const Navbar = () => {
     >
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         <Link href="/">
-          <Image
-            src={LogoImg}
-            alt="/"
-            width="150"
-            height="150"
-          />
+          <Image src={LogoImg} alt="/" width="150" height="150" />
         </Link>
         <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
           <Link href="/#home">
@@ -125,12 +126,7 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full justify-between items-center">
-              <Image
-                src={LogoImg}
-                alt="/"
-                width="100"
-                height="100"
-              />
+              <Image src={LogoImg} alt="/" width="100" height="100" />
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -184,7 +180,11 @@ const Navbar = () => {
                     <Fa.FaLinkedinIn className="text-[#f07d12]" />
                   </div>
                 </a>
-                <a href="https://github.com/JMAzer-dev" target="_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/JMAzer-dev"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <Fa.FaGithub className="text-[#f07d12]" />
                   </div>

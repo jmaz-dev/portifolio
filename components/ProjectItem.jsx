@@ -1,6 +1,8 @@
+//react_next
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+//i18n
 import { useTranslation } from "next-i18next";
 
 const ProjectItem = ({ title, backgroundImg, projectUrl, tech }) => {

@@ -1,8 +1,10 @@
-import React from "react";
-import Link from "next/link";
-import { useTranslation } from "next-i18next";
-import AboutIMG from "../public/assets/about.jpg";
+//next
 import Image from "next/image";
+import Link from "next/link";
+//assets
+import AboutIMG from "../public/assets/about.jpg";
+//i18n
+import { useTranslation } from "next-i18next";
 
 const About = () => {
   const { t } = useTranslation();
@@ -24,7 +26,7 @@ const About = () => {
           </Link>
         </div>
         <div className="w-ful h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-          <Image className="rounded-xl" src={AboutIMG} alt="about"  />
+          <Image className="rounded-xl" src={AboutIMG} alt="about" />
         </div>
       </div>
     </div>

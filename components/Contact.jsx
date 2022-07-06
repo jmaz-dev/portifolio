@@ -1,13 +1,19 @@
+//react_next
+import { useRef } from "react";
+import Link from "next/link";
 import Image from "next/image";
-import ContactImg from '../public/assets/contact.jpg'
+//assets
+import ContactImg from "../public/assets/contact.jpg";
+//icons
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
-import Link from "next/link";
-import { useRef } from "react";
+//emailjs
 import emailjs from "@emailjs/browser";
+//alert
 import Swal from "sweetalert2";
+//i18n
 import { useTranslation } from "next-i18next";
 
 const Contact = () => {
@@ -80,7 +86,11 @@ const Contact = () => {
                       <FaLinkedinIn className="text-[#f07d12]" />
                     </div>
                   </a>
-                  <a href="https://github.com/JMAzer-dev" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/JMAzer-dev"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaGithub className="text-[#f07d12]" />
                     </div>

@@ -1,10 +1,14 @@
+//react
 import { useContext } from "react";
+//icons
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+//typed.js
 import ReactTyped from "react-typed";
-import { useTranslation } from "next-i18next";
+//i18n
 import { I18nContext } from "next-i18next";
+import { useTranslation } from "next-i18next";
 
 const Main = () => {
   const {
@@ -17,9 +21,12 @@ const Main = () => {
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <div className="sm:flex sm:text-sm justify-center uppercase text-xs tracking-widest text-gray-700">
-            <div className={language === "pt" ? "hidden" : "flex text-center justify-center"}>
-            <p className="">{t("home:lets_build")}</p>
-
+            <div
+              className={
+                language === "pt" ? "hidden" : "flex text-center justify-center"
+              }
+            >
+              <p className="">{t("home:lets_build")}</p>
               <ReactTyped
                 className="font-bold md:pl-2 pl-1 text-[#f07d12]"
                 strings={[
@@ -32,9 +39,12 @@ const Main = () => {
                 loop
               />{" "}
             </div>
-            <div className={language === "pt" ? "flex text-center justify-center" : "hidden"}>
-            <p className="">{t("home:lets_build")}</p>
-
+            <div
+              className={
+                language === "pt" ? "flex text-center justify-center" : "hidden"
+              }
+            >
+              <p className="">{t("home:lets_build")}</p>
               <ReactTyped
                 className="font-bold md:pl-2 pl-1 text-[#f07d12]"
                 strings={[
