@@ -22,7 +22,6 @@ const Navbar = () => {
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#ecf0f3");
   const [linkColor, setLinkColor] = useState("#1f2937");
-  const [lang, setLang] = useState("visible");
   const router = useRouter();
   const handleNav = () => {
     setNav(!nav);
@@ -35,11 +34,9 @@ const Navbar = () => {
       router.asPath === "/miniblog" ||
       router.asPath === "/secretword"
     ) {
-      setLang("none");
       setNavBg("transparent");
       setLinkColor("#ecf0f3");
     } else {
-      setLang("visible");
       setNavBg("#ecf0f3");
       setLinkColor("#1f2937");
     }
@@ -95,7 +92,7 @@ const Navbar = () => {
               {t("home:contact")}
             </li>
           </Link>
-          <li style={{ display: `${lang}` }} className="flex items-center ml-8">
+          <li className="flex items-center ml-8">
             <LanguageSwitcher />
           </li>
         </ul>
@@ -103,7 +100,7 @@ const Navbar = () => {
           style={{ color: `${linkColor}` }}
           className="md:hidden flex cursor-pointer"
         >
-          <div style={{ display: `${lang}` }} className="mr-5 p-2">
+          <div className="mr-5 p-2">
             <LanguageSwitcher />
           </div>
 
