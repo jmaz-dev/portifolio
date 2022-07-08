@@ -20,7 +20,7 @@ const Main = () => {
     <div id="home" className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
-          <div className="sm:flex sm:text-sm justify-center uppercase text-xs tracking-widest text-gray-700">
+          <div className="sm:flex sm:text-sm justify-center uppercase text-xs text-gray-700 tracking-widest">
             <div
               className={
                 language === "pt" ? "hidden" : "flex text-center justify-center"
@@ -41,7 +41,7 @@ const Main = () => {
             </div>
             <div
               className={
-                language === "pt" ? "flex text-center justify-center" : "hidden"
+                language === "pt" ? "sm:flex text-center justify-center" : "hidden"
               }
             >
               <p className="">{t("home:lets_build")}</p>
