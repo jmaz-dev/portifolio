@@ -167,7 +167,7 @@ const Contact = () => {
                     name="message"
                   />
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4">
+                <button className="w-full p-4 text-gray-100 mt-4 hover:scale-105 ease-in duration-300">
                   {t("home:send")}
                 </button>
               </form>
