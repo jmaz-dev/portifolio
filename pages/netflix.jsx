@@ -45,11 +45,12 @@ const netflix = () => {
               {i18n.t("home:code")}
             </a>
           </button>
-          <button className="px-8 py-2 mt-4 mr-8">
+          <button className="px-8 py-2 mt-4 mr-8 opacity-30 cursor-not-allowed" disabled>
             <a
-              href="https://netflix-app-rho-orpin.vercel.app/"
-              target="_blank"
+            className="cursor-not-allowed"
+              href=""
               rel="noreferrer"
+
             >
               {i18n.t("home:demo")}
             </a>
