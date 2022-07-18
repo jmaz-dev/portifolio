@@ -49,6 +49,15 @@ const netflix = () => {
               {i18n.t("home:code")}
             </a>
           </button>
+          <button className="px-8 py-2 mt-4 mr-8">
+            <a
+              href="https://secretword-react-sigma.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {i18n.t("home:demo")}
+            </a>
+          </button>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">

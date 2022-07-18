@@ -6,7 +6,6 @@ import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { i18n } from "next-i18next";
 
-
 export async function getStaticProps({ locale }) {
   return {
     props: {
@@ -16,7 +15,6 @@ export async function getStaticProps({ locale }) {
 }
 
 const netflix = () => {
-
   return (
     <div className="w-full">
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
@@ -37,9 +35,7 @@ const netflix = () => {
         <div className="col-span-4">
           <p>{i18n.t("home:project")}</p>
           <h2 className="p-4">{i18n.t("home:over")}</h2>
-          <p className="p-2">
-          {i18n.t("home:netflix")}
-          </p>
+          <p className="p-2">{i18n.t("home:netflix")}</p>
           <button className="px-8 py-2 mt-4 mr-8">
             <a
               href="https://github.com/JMAzer-dev/netflix-react"
@@ -47,6 +43,15 @@ const netflix = () => {
               rel="noreferrer"
             >
               {i18n.t("home:code")}
+            </a>
+          </button>
+          <button className="px-8 py-2 mt-4 mr-8">
+            <a
+              href="https://netflix-app-rho-orpin.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {i18n.t("home:demo")}
             </a>
           </button>
         </div>
