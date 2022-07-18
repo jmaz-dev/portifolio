@@ -33,7 +33,9 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          if(result === "OK"){
+          console.log(result)
+          console.log(result.text)
+          if(result.text === "OK"){
             Swal.fire({
               position: "center",
               icon: "success",
