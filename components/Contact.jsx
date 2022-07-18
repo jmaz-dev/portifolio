@@ -33,19 +33,21 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          if(result.text === "OK"){
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Email Sent",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
         },
         (error) => {
           console.log(error.text);
         }
       );
-    Swal.fire({
-      position: "center",
-      icon: "success",
-      title: "Email Sent",
-      showConfirmButton: false,
-      timer: 1500,
-    });
+    
     e.target.reset();
   };
 
@@ -123,6 +125,7 @@ const Contact = () => {
                       className="border-2 p-3 rounded-lg flex border-gray-300"
                       type="text"
                       name="name"
+                      required
                     />
                   </div>
                   <div className="flex flex-col">
@@ -133,6 +136,7 @@ const Contact = () => {
                       className="border-2 p-3 rounded-lg flex border-gray-300"
                       type="tel"
                       name="phone"
+                      required
                     />
                   </div>
                 </div>
@@ -144,6 +148,7 @@ const Contact = () => {
                     className="border-2 p-3 rounded-lg flex border-gray-300"
                     type="text"
                     name="email"
+                    required
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -154,6 +159,7 @@ const Contact = () => {
                     className="border-2 p-3 rounded-lg flex border-gray-300"
                     type="text"
                     name="subject"
+                    required
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -165,6 +171,7 @@ const Contact = () => {
                     rows="8"
                     type="text"
                     name="message"
+                    required
                   />
                 </div>
                 <button className="w-full p-4 text-gray-100 mt-4 hover:scale-105 ease-in duration-300">

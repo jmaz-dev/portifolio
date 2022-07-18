@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import projectImg from "../public/assets/projects/miniblogbg.png";
+import projectImg from "../public/assets/projects/todo-ts.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -15,7 +15,6 @@ export async function getStaticProps({ locale }) {
 }
 
 const netflix = () => {
-
   return (
     <div className="w-full">
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
@@ -28,20 +27,18 @@ const netflix = () => {
           alt="/"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-          <h2 className="py-2">Miniblog</h2>
-          <h3>React JS / Firebase / Context</h3>
+          <h2 className="py-2">Secret Word</h2>
+          <h3>React JS / Tailwind / TypeScrypt</h3>
         </div>
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
         <div className="col-span-4">
           <p>{i18n.t("home:project")}</p>
           <h2 className="p-4">{i18n.t("home:over")}</h2>
-          <p className="p-2">
-          {i18n.t("home:miniblog")}
-          </p>
+          <p className="p-2">{i18n.t("home:tstodo")}</p>
           <button className="px-8 py-2 mt-4 mr-8">
             <a
-              href="https://github.com/JMAzer-dev/miniblog-react"
+              href="https://github.com/JMAzer-dev/secretword-react"
               target="_blank"
               rel="noreferrer"
             >
@@ -50,7 +47,7 @@ const netflix = () => {
           </button>
           <button className="px-8 py-2 mt-4 mr-8">
             <a
-              href="https://miniblog-react.vercel.app/"
+              href="https://react-todo-tan-one.vercel.app/"
               target="_blank"
               rel="noreferrer"
             >
@@ -68,19 +65,11 @@ const netflix = () => {
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" />
-                Context
+                TypeScript
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" />
-                Javascript
-              </p>
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" />
-                Firebase
-              </p>
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" />
-                API REST
+                Tailwind CSS
               </p>
             </div>
           </div>
