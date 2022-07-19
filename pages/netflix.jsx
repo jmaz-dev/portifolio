@@ -45,9 +45,9 @@ const netflix = () => {
               {i18n.t("home:code")}
             </a>
           </button>
-          <button className="px-8 py-2 mt-4 mr-8 opacity-30 cursor-pointer">
+          <button className="px-8 py-2 mt-4 mr-8 cursor-pointer">
             <a
-              href="netflix-app-jmazer.vercel.app"
+              href="https://netflix-app-jmazer.vercel.app/signup"
               target="_blank"
               rel="noreferrer"
             >
