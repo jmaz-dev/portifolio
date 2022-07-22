@@ -1,5 +1,5 @@
-//next
-import React from "react";
+//react_next
+import React, { useEffect } from "react";
 import Image from "next/image";
 //assets
 import CssImg from "../public/assets/skills/css.png";
@@ -10,20 +10,31 @@ import JSImg from "../public/assets/skills/javascript.png";
 import NextImg from "../public/assets/skills/nextjs.png";
 import ReactImg from "../public/assets/skills/react.png";
 import TWImg from "../public/assets/skills/tailwind.png";
+//aos
+import Aos from "aos";
+import "aos/dist/aos.css";
 //i18n
 import { useTranslation } from "next-i18next";
 
 const Skills = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   const { t } = useTranslation();
 
   return (
     <div id="skills" className="w-full lg:h-screen p-2">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-        <p className="text-xl tracking-widest uppercase text-[#f07d12]">
-          {t("home:skills")}
-        </p>
-        <h2 className="p-4 capitalize">{t("home:i_do")}</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div data-aos="zoom-in">
+          <p className="text-xl tracking-widest uppercase text-[#f07d12]">
+            {t("home:skills")}
+          </p>
+          <h2 className="p-4 capitalize">{t("home:i_do")}</h2>
+        </div>
+        <div
+          data-aos="zoom-in"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">

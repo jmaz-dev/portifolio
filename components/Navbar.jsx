@@ -1,6 +1,5 @@
-//react
+//react_next
 import React, { useEffect, useState } from "react";
-//next
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
