@@ -1,11 +1,14 @@
 //react
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 //icons
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 //typed.js
 import ReactTyped from "react-typed";
+//aos
+import Aos from "aos";
+import "aos/dist/aos.css";
 //i18n
 import { I18nContext } from "next-i18next";
 import { useTranslation } from "next-i18next";
@@ -14,7 +17,12 @@ const Main = () => {
   const {
     i18n: { language },
   } = useContext(I18nContext);
+
   const { t } = useTranslation();
+
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
 
   return (
     <div id="home" className="w-full h-screen text-center">
@@ -41,7 +49,9 @@ const Main = () => {
             </div>
             <div
               className={
-                language === "pt" ? "sm:flex text-center justify-center" : "hidden"
+                language === "pt"
+                  ? "sm:flex text-center justify-center"
+                  : "hidden"
               }
             >
               <p className="">{t("home:lets_build")}</p>
@@ -59,7 +69,7 @@ const Main = () => {
             </div>
             <p className="ml-1">{t("home:together")}</p>
           </div>
-          <h1 className="py-4 text-gray-700">
+          <h1 className="py-4 text-gray-700" data-aos="flip-right">
             {t("home:hi")}
             <span className="text-[#f07d12]"> João</span>
           </h1>
@@ -67,7 +77,10 @@ const Main = () => {
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
             {t("home:minindex")}
           </p>
-          <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+          <div
+            data-aos="zoom-in"
+            className="flex items-center justify-between max-w-[330px] m-auto py-4"
+          >
             <a
               href="https://www.linkedin.com/in/jmazeredo/"
               target="_blank"

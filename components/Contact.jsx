@@ -1,7 +1,10 @@
 //react_next
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+//Aos
+import Aos from "aos";
+import "aos/dist/aos.css";
 //assets
 import ContactImg from "../public/assets/contact.jpg";
 //icons
@@ -19,6 +22,10 @@ import { useTranslation } from "next-i18next";
 const Contact = () => {
   const { t } = useTranslation();
 
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -33,7 +40,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          if(result.text === "OK"){
+          if (result.text === "OK") {
             Swal.fire({
               position: "center",
               icon: "success",
@@ -47,20 +54,25 @@ const Contact = () => {
           console.log(error.text);
         }
       );
-    
+
     e.target.reset();
   };
 
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-        <p className="text-xl tracking-widest uppercase text-[#f07d12]">
-          {t("home:contact")}
-        </p>
-        <h2 className="p-4 capitalize"> {t("home:touch")}</h2>
+        <div data-aos="zoom-in">
+          <p className="text-xl tracking-widest uppercase text-[#f07d12]">
+            {t("home:contact")}
+          </p>
+          <h2 className="p-4 capitalize"> {t("home:touch")}</h2>
+        </div>
         <div className="grid lg:grid-cols-5 gap-8">
           {/*left */}
-          <div className="col-span-3 lg:col-span-2 w-full shadow-xl shadow-gray-400 rounded-xl p-4">
+          <div
+            className="col-span-3 lg:col-span-2 w-full shadow-xl shadow-gray-400 rounded-xl p-4"
+            data-aos="zoom-in"
+          >
             <div className="lg:p-4 h-full">
               <div>
                 <Image
@@ -111,9 +123,11 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          {/*right */}
-
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+          {/*Right */}
+          <div
+            className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4"
+            data-aos="zoom-in"
+          >
             <div className="p-4">
               <form ref={form} onSubmit={sendEmail}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
@@ -184,7 +198,7 @@ const Contact = () => {
       </div>
       <div className="flex justify-center py-12">
         <Link href="/#home">
-          <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+          <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer duration-300 animate-bounce">
             <HiOutlineChevronDoubleUp
               className="m-auto text-[#da7b23]"
               size={30}

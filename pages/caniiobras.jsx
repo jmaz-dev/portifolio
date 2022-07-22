@@ -8,6 +8,8 @@ import { RiRadioButtonFill } from "react-icons/ri";
 //i18n
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { i18n } from "next-i18next";
+//aos
+import "aos/dist/aos.css";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -16,7 +18,6 @@ export async function getStaticProps({ locale }) {
     },
   };
 }
-
 
 const netflix = (props) => {
 
@@ -33,39 +34,45 @@ const netflix = (props) => {
           alt="/"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-          <h2 className="py-2">Canii Obras</h2>
-          <h3>Next JS / Tailwind / EmailJs</h3>
+          <div data-aos="zoom-in">
+            <h2 className="py-2">Canii Obras</h2>
+            <h3>Next JS / Tailwind / EmailJs</h3>
+          </div>
         </div>
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
         {/* resume */}
         <div className="col-span-4">
-          <p>{i18n.t("home:project")}</p>
-          <h2 className="p-4">{i18n.t("home:over")}</h2>
-          <p className="p-2">
-            {i18n.t("home:cani")}
-          </p>
-          <button className="px-8 py-2 mt-4 mr-8">
-            <a
-              href="https://github.com/JMAzer-dev/caniiobras-next"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {i18n.t("home:code")}
-            </a>
-          </button>
-          <button className="px-8 py-2 mt-4 mr-8">
-            <a
-              href="https://caniiobras-next.vercel.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {i18n.t("home:demo")}
-            </a>
-          </button>
+          <div data-aos="zoom-in">
+            <h2 className="p-4">{i18n.t("home:over")}</h2>
+            <p className="p-2">{i18n.t("home:cani")}</p>
+          </div>
+          <div data-aos="zoom-in">
+            <button className="px-8 py-2 mt-4 mr-8">
+              <a
+                href="https://github.com/JMAzer-dev/caniiobras-next"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {i18n.t("home:code")}
+              </a>
+            </button>
+            <button className="px-8 py-2 mt-4 mr-8">
+              <a
+                href="https://caniiobras-next.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {i18n.t("home:demo")}
+              </a>
+            </button>
+          </div>
         </div>
         {/* tech */}
-        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
+        <div
+          data-aos="flip-right"
+          className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4"
+        >
           <div className="p-2">
             <p className="text-center font-bold pb-2">{i18n.t("home:tech")}</p>
             <div className="grid grid-cols-3 md:grid-cols-1">
