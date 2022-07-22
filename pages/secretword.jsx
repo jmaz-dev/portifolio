@@ -1,7 +1,6 @@
 //react_next
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
 //assets
 import projectImg from "../public/assets/projects/secretword.png";
 //icons
@@ -10,7 +9,6 @@ import { RiRadioButtonFill } from "react-icons/ri";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { i18n } from "next-i18next";
 //aos
-import Aos from "aos";
 import "aos/dist/aos.css";
 
 export async function getStaticProps({ locale }) {
@@ -22,9 +20,6 @@ export async function getStaticProps({ locale }) {
 }
 
 const netflix = () => {
-  useEffect(() => {
-    Aos.init({ duration: 1500 });
-  }, []);
 
   return (
     <div className="w-full">

@@ -1,6 +1,5 @@
 //react_next
 import Image from "next/image";
-import React, { useEffect } from "react";
 import Link from "next/link";
 //assets
 import projectImg from "../public/assets/projects/miniblogbg.png";
@@ -22,9 +21,6 @@ export async function getStaticProps({ locale }) {
 }
 
 const netflix = () => {
-  useEffect(() => {
-    Aos.init({ duration: 1500 });
-  }, []);
 
   return (
     <div className="w-full">

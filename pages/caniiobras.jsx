@@ -9,9 +9,7 @@ import { RiRadioButtonFill } from "react-icons/ri";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { i18n } from "next-i18next";
 //aos
-import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -22,9 +20,7 @@ export async function getStaticProps({ locale }) {
 }
 
 const netflix = (props) => {
-  useEffect(() => {
-    Aos.init({ duration: 1500 });
-  }, []);
+
   return (
     <div className="w-full">
       {/* background image container */}
