@@ -1,5 +1,7 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 //react_next
 import Image from "next/image";
+import { useEffect } from "react";
 import Link from "next/link";
 //assets
 import projectImg from "../public/assets/projects/todo-ts.png";
@@ -10,6 +12,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { i18n } from "next-i18next";
 //aos
 import "aos/dist/aos.css";
+import Aos from "aos";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -20,7 +23,9 @@ export async function getStaticProps({ locale }) {
 }
 
 const netflix = () => {
-
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
     <div className="w-full">
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
@@ -33,7 +38,7 @@ const netflix = () => {
           alt="/"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-          <div data-aos="zoom-in">
+          <div data-aos="fade-up">
             <h2 className="py-2">Secret Word</h2>
             <h3>React JS / Tailwind / TypeScrypt</h3>
           </div>
@@ -41,11 +46,11 @@ const netflix = () => {
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
         <div className="col-span-4">
-          <div data-aos="zoom-in">
+          <div data-aos="fade-up">
             <h2 className="p-4">{i18n.t("home:over")}</h2>
             <p className="p-2">{i18n.t("home:tstodo")}</p>
           </div>
-          <div data-aos="zoom-in">
+          <div data-aos="fade-up">
             <button className="px-8 py-2 mt-4 mr-8">
               <a
                 href="https://github.com/JMAzer-dev/secretword-react"
