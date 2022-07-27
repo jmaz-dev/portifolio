@@ -61,7 +61,7 @@ const Contact = () => {
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-        <div data-aos="zoom-in">
+        <div data-aos="fade-up">
           <p className="text-xl tracking-widest uppercase text-[#f07d12]">
             {t("home:contact")}
           </p>
@@ -71,7 +71,7 @@ const Contact = () => {
           {/*left */}
           <div
             className="col-span-3 lg:col-span-2 w-full shadow-xl shadow-gray-400 rounded-xl p-4"
-            data-aos="zoom-in"
+            data-aos="fade-up"
           >
             <div className="lg:p-4 h-full">
               <div>
@@ -126,7 +126,7 @@ const Contact = () => {
           {/*Right */}
           <div
             className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4"
-            data-aos="zoom-in"
+            data-aos="fade-up"
           >
             <div className="p-4">
               <form ref={form} onSubmit={sendEmail}>
