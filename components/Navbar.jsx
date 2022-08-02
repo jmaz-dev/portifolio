@@ -33,7 +33,7 @@ const Navbar = () => {
       router.asPath === "/miniblog" ||
       router.asPath === "/secretword" ||
       router.asPath === "/reactgram" ||
-      router.asPath === "/tstodo"
+      router.asPath === "/azclothes"
     ) {
       setNavBg("transparent");
       setLinkColor("#ecf0f3");

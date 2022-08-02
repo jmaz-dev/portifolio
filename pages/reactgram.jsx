@@ -28,7 +28,7 @@ const netflix = () => {
   }, []);
   return (
     <div className="w-full">
-      <div className="w-screen h-[30vh] lg:h-[40vh] relative">
+      <div className=" max-w-screen h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
           className="absolute z-1"
@@ -100,7 +100,7 @@ const netflix = () => {
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" />
-                API REST
+                REST API
               </p>
             </div>
           </div>

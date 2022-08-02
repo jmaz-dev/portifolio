@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import Link from "next/link";
 //assets
-import projectImg from "../public/assets/projects/todo-ts.png";
+import projectImg from "../public/assets/projects/azclothesbg.png";
 //icons
 import { RiRadioButtonFill } from "react-icons/ri";
 //i18n
@@ -39,8 +39,8 @@ const netflix = () => {
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
           <div data-aos="fade-up">
-            <h2 className="py-2">Secret Word</h2>
-            <h3>React JS / Tailwind / TypeScrypt</h3>
+            <h2 className="py-2">Az Clothes</h2>
+            <h3>Next JS / Tailwind / MongoDB</h3>
           </div>
         </div>
       </div>
@@ -48,12 +48,12 @@ const netflix = () => {
         <div className="col-span-4">
           <div data-aos="fade-up">
             <h2 className="p-4">{i18n.t("home:over")}</h2>
-            <p className="p-2">{i18n.t("home:tstodo")}</p>
+            <p className="p-2">{i18n.t("home:azclothes")}</p>
           </div>
           <div data-aos="fade-up">
             <button className="px-8 py-2 mt-4 mr-8">
               <a
-                href="https://github.com/JMAzer-dev/secretword-react"
+                href="https://github.com/JMAzer-dev/az-clothes"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -62,7 +62,7 @@ const netflix = () => {
             </button>
             <button className="px-8 py-2 mt-4 mr-8">
               <a
-                href="https://react-todo-tan-one.vercel.app/"
+                href="https://az-clothes.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -80,15 +80,27 @@ const netflix = () => {
             <div className="grid grid-cols-3 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" />
-                React
+                Next
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" />
-                TypeScript
+                Next_Auth
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" />
-                Tailwind CSS
+                Tailwind
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" />
+                MongoDB
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" />
+                REST API
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" />
+                PayPal
               </p>
             </div>
           </div>
