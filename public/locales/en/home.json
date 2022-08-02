@@ -1,6 +1,7 @@
 {
   "about": "about",
   "available": "I am available for freelance or full-time positions. Contact me and let's talk.",
+  "azclothes": "I built this app on next.js and it's hosted on Vercel. It consists of a working ECommerce model, but some functionality will still be added through another branch. It currently has user authentication provided on all data entry pages through Next_auth. The MongoDB database was implemented to store products and users (for now the only way to insert data is via seed) with the help of mongoose, bcrypt and axios to manange the data. PayPal API was implemented as a payment method and your response immediately influences the payment status of the order. Paypal is in 'development mode' for security. React-hook-form was used to help with data insertion. Finally, the application has a global and responsive layout.",
   "back": "Back",
   "cani": "I built this application in Next JS. Initially it was a freelance job and I had to do it a little fast so I used some packages like Swiper for a bealtiful and clean carousel, EmailJs for an complete email sending service. It has the responsive design using Tailwind.",
   "check": "Check out some of my latest projects",
@@ -23,7 +24,7 @@
   "minindex": "I'm a front-end web developer specializing in building and designing exceptional digital experiences. Currently, I'm focused on bulding responsive fron-end web applications while learning back-end technologies",
   "more": "More Info",
   "name": "Name",
-  "netflix": "I built this application in React JS and is hosted on GitHub pages. This app features user authentication with firebase as well as the firestore cloud storage database. This application is pulling movie data from an the IMDB movie API and displaying different categories. It features horizontal sliding and a featured selection. The useContext hook is also being implemented for app-wide state management.",
+  "netflix": "I built this application in React JS and is hosted on Vercel. This app features user authentication with firebase as well as the firestore cloud storage database. This application is pulling movie data from an the IMDB movie API and displaying different categories. It features horizontal sliding and a featured selection. The useContext hook is also being implemented for app-wide state management.",
   "normal": "I am not your normal developer",
   "over": "Overview",
   "phone": "Phone Number",

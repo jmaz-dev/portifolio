@@ -1,20 +1,20 @@
 //react_next
-import React, { useEffect } from 'react';
-import Image from 'next/image';
+import React, { useEffect } from "react";
+import Image from "next/image";
 //assets
-import CssImg from '../public/assets/skills/css.png';
-import FBImg from '../public/assets/skills/firebase.png';
-import HTMLImg from '../public/assets/skills/html.png';
-import GitImg from '../public/assets/skills/github1.png';
-import JSImg from '../public/assets/skills/javascript.png';
-import NextImg from '../public/assets/skills/nextjs.png';
-import ReactImg from '../public/assets/skills/react.png';
-import TWImg from '../public/assets/skills/tailwind.png';
+import CssImg from "../public/assets/skills/css.png";
+import FBImg from "../public/assets/skills/firebase.png";
+import HTMLImg from "../public/assets/skills/html.png";
+import GitImg from "../public/assets/skills/github1.png";
+import JSImg from "../public/assets/skills/javascript.png";
+import NextImg from "../public/assets/skills/nextjs.png";
+import ReactImg from "../public/assets/skills/react.png";
+import TWImg from "../public/assets/skills/tailwind.png";
 //aos
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 //i18n
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "next-i18next";
 
 const Skills = () => {
   useEffect(() => {
@@ -27,9 +27,9 @@ const Skills = () => {
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <div data-aos="fade-up">
           <p className="text-xl tracking-widest uppercase text-[#f07d12]">
-            {t('home:skills')}
+            {t("home:skills")}
           </p>
-          <h2 className="p-4 capitalize">{t('home:i_do')}</h2>
+          <h2 className="p-4 capitalize">{t("home:i_do")}</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div

@@ -6,7 +6,7 @@ import miniBlogImg from "../public/assets/projects/miniblog.png";
 import secretWordImg from "../public/assets/projects/secretword.png";
 import caniObrasImg from "../public/assets/projects/caniobras.png";
 import reactGramImg from "../public/assets/projects/reactgram.png";
-import todoTSImg from "../public/assets/projects/todo-ts.png";
+import azClothesImg from "../public/assets/projects/azclothes.png";
 //aos
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -38,6 +38,22 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div data-aos="flip-right">
             <ProjectItem
+              title="Az Clothes"
+              backgroundImg={azClothesImg}
+              projectUrl="/azclothes"
+              tech={"Next.js"}
+            />
+          </div>
+          <div data-aos="flip-right">
+            <ProjectItem
+              title="ReactGram"
+              backgroundImg={reactGramImg}
+              projectUrl="/reactgram"
+              tech={"React.js / Node.js"}
+            />
+          </div>
+          <div data-aos="flip-right">
+            <ProjectItem
               title="Netflix"
               backgroundImg={netflixImg}
               projectUrl="/netflix"
@@ -52,22 +68,7 @@ const Projects = () => {
               tech={"React.js"}
             />
           </div>
-          <div data-aos="flip-right">
-            <ProjectItem
-              title="ReactGram"
-              backgroundImg={reactGramImg}
-              projectUrl="/reactgram"
-              tech={"React.js / Node.js"}
-            />
-          </div>
-          <div data-aos="flip-right">
-            <ProjectItem
-              title="Cani Obras"
-              backgroundImg={caniObrasImg}
-              projectUrl="/caniiobras"
-              tech={"Next.js"}
-            />
-          </div>
+
           <div
             className={hide ? "hidden" : "block duration-200"}
             data-aos="flip-right"
@@ -85,12 +86,12 @@ const Projects = () => {
             className={hide ? "hidden" : "block duration-200"}
             data-aos="flip-right"
           >
-            <div>
+            <div data-aos="flip-right">
               <ProjectItem
-                title="TS ToDo"
-                backgroundImg={todoTSImg}
-                projectUrl="/tstodo"
-                tech={"React.js"}
+                title="Cani Obras"
+                backgroundImg={caniObrasImg}
+                projectUrl="/caniiobras"
+                tech={"Next.js"}
               />
             </div>
           </div>

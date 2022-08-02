@@ -1,14 +1,14 @@
 //react_next
-import Image from 'next/image';
-import Link from 'next/link';
-import { useEffect } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect } from "react";
 //assets
-import AboutIMG from '../public/assets/about.jpg';
+import AboutIMG from "../public/assets/about.jpg";
 //aos
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 //i18n
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "next-i18next";
 
 const About = () => {
   const { t } = useTranslation();
@@ -23,16 +23,16 @@ const About = () => {
         <div className="col-span-2">
           <div data-aos="fade-up">
             <p className="uppercase text-xl tracking-widest text-[#f07d12]">
-              {t('home:about')}
+              {t("home:about")}
             </p>
-            <h2 className="p-4 capitalize">{t('home:who')}</h2>
+            <h2 className="p-4 capitalize">{t("home:who")}</h2>
           </div>
           <div data-aos="fade-up">
-            <p className="p-2 text-gray-600">&raquo; {t('home:normal')}</p>
-            <p className="p-2 text-gray-600">{t('home:resume')}</p>
+            <p className="p-2 text-gray-600">&raquo; {t("home:normal")}</p>
+            <p className="p-2 text-gray-600">{t("home:resume")}</p>
             <Link href="/#projects">
               <p className="py-2 text-gray-600 underline cursor-pointer">
-                {t('home:check')}
+                {t("home:check")}
               </p>
             </Link>
           </div>
