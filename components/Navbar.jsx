@@ -1,26 +1,26 @@
 //react_next
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 //components
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageSwitcher from './LanguageSwitcher';
 //assets
-import LogoImg from "../public/assets/logosm.png";
+import LogoImg from '../public/assets/logosm.png';
 //icons
-import * as Ai from "react-icons/ai";
-import * as Fa from "react-icons/fa";
-import * as Bs from "react-icons/bs";
+import * as Ai from 'react-icons/ai';
+import * as Fa from 'react-icons/fa';
+import * as Bs from 'react-icons/bs';
 //i18n
-import { useTranslation } from "next-i18next";
+import { useTranslation } from 'next-i18next';
 
 const Navbar = () => {
   const { t } = useTranslation();
 
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState("#ecf0f3");
-  const [linkColor, setLinkColor] = useState("#1f2937");
+  const [navBg, setNavBg] = useState('#ecf0f3');
+  const [linkColor, setLinkColor] = useState('#1f2937');
   const router = useRouter();
   const handleNav = () => {
     setNav(!nav);
@@ -28,18 +28,18 @@ const Navbar = () => {
 
   useEffect(() => {
     if (
-      router.asPath === "/netflix" ||
-      router.asPath === "/caniiobras" ||
-      router.asPath === "/miniblog" ||
-      router.asPath === "/secretword" ||
-      router.asPath === "/reactgram" ||
-      router.asPath === "/azclothes"
+      router.asPath === '/netflix' ||
+      router.asPath === '/caniiobras' ||
+      router.asPath === '/miniblog' ||
+      router.asPath === '/secretword' ||
+      router.asPath === '/reactgram' ||
+      router.asPath === '/azclothes'
     ) {
-      setNavBg("transparent");
-      setLinkColor("#ecf0f3");
+      setNavBg('transparent');
+      setLinkColor('#ecf0f3');
     } else {
-      setNavBg("#ecf0f3");
-      setLinkColor("#1f2937");
+      setNavBg('#ecf0f3');
+      setLinkColor('#1f2937');
     }
   }, [router]);
 
@@ -51,7 +51,7 @@ const Navbar = () => {
         setShadow(false);
       }
     };
-    window.addEventListener("scroll", handleShaddow);
+    window.addEventListener('scroll', handleShaddow);
   }, []);
 
   return (
@@ -59,8 +59,8 @@ const Navbar = () => {
       style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
-          ? "fixed w-full h-20 shadow-xl duration-300 z-[100]"
-          : "fixed w-full h-20 z-[100]"
+          ? 'fixed w-full h-20 shadow-xl duration-300 z-[100]'
+          : 'fixed w-full h-20 z-[100]'
       }
     >
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
@@ -72,25 +72,25 @@ const Navbar = () => {
             <li className="ml-10 text-sm uppercase hover:text-gray-400 duration-300 py-1">
               Home
             </li>
-          </Link>{" "}
+          </Link>{' '}
           <Link href="/#about">
             <li className="ml-10 text-sm uppercase hover:text-gray-400 duration-300  py-1">
-              {t("home:about")}
+              {t('home:about')}
             </li>
-          </Link>{" "}
+          </Link>{' '}
           <Link href="/#skills">
             <li className="ml-10 text-sm uppercase hover:text-gray-400 duration-300  py-1">
-              {t("home:skills")}
+              {t('home:skills')}
             </li>
-          </Link>{" "}
+          </Link>{' '}
           <Link href="/#projects">
             <li className="ml-10 text-sm uppercase hover:text-gray-400 duration-300  py-1">
-              {t("home:projects")}
+              {t('home:projects')}
             </li>
-          </Link>{" "}
+          </Link>{' '}
           <Link href="/#contact">
             <li className="ml-10 text-sm uppercase hover:text-gray-400 duration-300  py-1">
-              {t("home:contact")}
+              {t('home:contact')}
             </li>
           </Link>
           <li className="flex items-center ml-8">
@@ -112,14 +112,14 @@ const Navbar = () => {
       </div>
       <div
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+          nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''
         }
       >
         <div
           className={
             nav
               ? ` fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500`
-              : "fixed left-[-100%] p-10 ease-in duration-500"
+              : 'fixed left-[-100%] p-10 ease-in duration-500'
           }
         >
           <div>
@@ -133,7 +133,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="border-b border-gray-300 my-0">
-              <p className="w-[85%] md:w-[90px] py-4">{t("home:leg")}</p>
+              <p className="w-[85%] md:w-[90px] py-4">{t('home:leg')}</p>
             </div>
           </div>
           <div className="py-4 flex flex-col">
@@ -142,31 +142,31 @@ const Navbar = () => {
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Home
                 </li>
-              </Link>{" "}
+              </Link>{' '}
               <Link href="/#about">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  {t("home:about")}
+                  {t('home:about')}
                 </li>
-              </Link>{" "}
+              </Link>{' '}
               <Link href="/#skills">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  {t("home:skills")}
+                  {t('home:skills')}
                 </li>
-              </Link>{" "}
+              </Link>{' '}
               <Link href="/#projects">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  {t("home:projects")}
+                  {t('home:projects')}
                 </li>
-              </Link>{" "}
+              </Link>{' '}
               <Link href="/#contact">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  {t("home:contact")}
+                  {t('home:contact')}
                 </li>
               </Link>
             </ul>
             <div className="pt-32">
               <p className="uppercase tracking-widest text-[#f07d12]">
-                {t("home:let_conn")}
+                {t('home:let_conn')}
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <a
