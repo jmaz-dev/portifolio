@@ -31,8 +31,8 @@ const netflix = () => {
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
-          className="absolute z-1"
           layout="fill"
+          priority
           objectFit="cover"
           src={projectImg}
           alt="/"
@@ -51,20 +51,22 @@ const netflix = () => {
             <p className="p-2">{i18n.t("home:netflix")}</p>
           </div>
           <div data-aos="fade-up">
-            <button className="px-8 py-2 mt-4 mr-8">
+            <button className="py-2 mt-4 mr-8">
               <a
                 href="https://github.com/JMAzer-dev/netflix-react"
                 target="_blank"
                 rel="noreferrer"
+                className="px-8 py-2"
               >
                 {i18n.t("home:code")}
               </a>
             </button>
-            <button className="px-8 py-2 mt-4 mr-8 cursor-pointer">
+            <button className="py-2 mt-4 mr-8 cursor-pointer">
               <a
                 href="https://netflix-app-jmazer.vercel.app/signup"
                 target="_blank"
                 rel="noreferrer"
+                className="px-8 py-2"
               >
                 {i18n.t("home:demo")}
               </a>
@@ -102,7 +104,7 @@ const netflix = () => {
           </div>
         </div>
         <Link href="/#projects">
-          <p className="underline cursor-pointer">{i18n.t("home:back")}</p>
+          <p className="underline cursor-pointer mb-8 ml-2">{i18n.t("home:back")}</p>
         </Link>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import netflixImg from "../public/assets/projects/netflix.png";
 import miniBlogImg from "../public/assets/projects/miniblog.png";
 import secretWordImg from "../public/assets/projects/secretword.png";
-import caniObrasImg from "../public/assets/projects/caniobras.png";
+import frellaImg from "../public/assets/projects/freelances.png";
 import reactGramImg from "../public/assets/projects/reactgram.png";
 import azClothesImg from "../public/assets/projects/azclothes.png";
 //aos
@@ -88,10 +88,10 @@ const Projects = () => {
           >
             <div data-aos="flip-right">
               <ProjectItem
-                title="Cani Obras"
-                backgroundImg={caniObrasImg}
+                title="Freelances"
+                backgroundImg={frellaImg}
                 projectUrl="/caniiobras"
-                tech={"Next.js"}
+                tech={""}
               />
             </div>
           </div>

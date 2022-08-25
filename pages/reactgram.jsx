@@ -13,7 +13,6 @@ import { i18n } from "next-i18next";
 //aos
 import "aos/dist/aos.css";
 import Aos from "aos";
-
 export async function getStaticProps({ locale }) {
   return {
     props: {
@@ -31,8 +30,8 @@ const netflix = () => {
       <div className=" max-w-screen h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
-          className="absolute z-1"
           layout="fill"
+          priority
           objectFit="cover"
           src={projectImg}
           alt="/"
@@ -51,20 +50,22 @@ const netflix = () => {
             <p className="p-2">{i18n.t("home:reactgram")}</p>
           </div>
           <div data-aos="fade-up">
-            <button className="px-8 py-2 mt-4 mr-8">
+            <button className="py-2 mt-4 mr-8">
               <a
                 href="https://github.com/JMAzer-dev/reactgram"
                 target="_blank"
                 rel="noreferrer"
+                className="px-8 py-2"
               >
                 {i18n.t("home:code")}
               </a>
             </button>
-            <button className="px-8 py-2 mt-4 mr-8">
+            <button className="py-2 mt-4 mr-8">
               <a
                 href="https://reactgram-six.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
+                className="px-8 py-2"
               >
                 {i18n.t("home:demo")}
               </a>
@@ -73,7 +74,7 @@ const netflix = () => {
         </div>
         <div
           data-aos="flip-right"
-          className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4"
+          className="my-auto col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4"
         >
           <div className="p-2">
             <p className="text-center font-bold pb-2">{i18n.t("home:tech")}</p>
@@ -106,7 +107,7 @@ const netflix = () => {
           </div>
         </div>
         <Link href="/#projects">
-          <p className="underline cursor-pointer">{i18n.t("home:back")}</p>
+          <p className="underline cursor-pointer mb-8 ml-2">{i18n.t("home:back")}</p>
         </Link>
       </div>
     </div>
