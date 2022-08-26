@@ -90,7 +90,7 @@ const Projects = () => {
               <ProjectItem
                 title="Freelances"
                 backgroundImg={frellaImg}
-                projectUrl="/caniiobras"
+                projectUrl="/freelance"
                 tech={""}
               />
             </div>
