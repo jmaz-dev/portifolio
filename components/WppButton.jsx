@@ -20,7 +20,7 @@ const WppButton = () => {
       58684
     );
   }, []);
-  return <span class="badge bg-primary">&lt;body/&gt;</span>;
+  return <span className="badge bg-primary">&lt;body/&gt;</span>;
 };
 
 export default WppButton;
