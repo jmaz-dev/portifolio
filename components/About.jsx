@@ -38,11 +38,14 @@ const About = () => {
           </div>
         </div>
         <div data-aos="flip-right">
-          <div className="w-ful h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 duration-300 ease-in">
+          <div className="w-ful h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 duration-300 ease-in hover:grayscale-0 grayscale">
             <Image
               className="rounded-xl ease-in duration-300"
               src={AboutIMG}
               alt="about"
+              layout='fixed'
+              height={500}
+              width={400}
             />
           </div>
         </div>

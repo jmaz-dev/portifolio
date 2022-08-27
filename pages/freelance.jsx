@@ -98,7 +98,7 @@ const netflix = (props) => {
                 className="shadow-xl h-64 shadow-gray-400 rounded-xl  bg-canii bg-opacity-80 bg-cover"
               ></div>
               <div data-aos="fade-up">
-                <button className="py-2 mt-4">
+                <button className="py-2 mt-4 hover:scale-105 active:scale-95 ease-in duration-200">
                   <a
                     href="https://caniiobras-next.vercel.app/"
                     target="_blank"
@@ -116,7 +116,7 @@ const netflix = (props) => {
                 className="shadow-xl h-64 shadow-gray-400 rounded-xl  bg-luana bg-opacity-80 bg-cover"
               ></div>
               <div data-aos="fade-up">
-                <button className="py-2 mt-4">
+                <button className="py-2 mt-4 hover:scale-105 active:scale-95 ease-in duration-200">
                   <a
                     href="https://luanarogues.epizy.com/"
                     target="_blank"
@@ -135,7 +135,7 @@ const netflix = (props) => {
                 className="shadow-xl h-64 shadow-gray-400 rounded-xl bg-glf bg-opacity-80 bg-cover hover:opacity-100"
               ></div>
               <div data-aos="fade-up">
-                <button className="py-2 mt-4">
+                <button className="py-2 mt-4 hover:scale-105 active:scale-95 ease-in duration-200">
                   <a
                     href="https://grupo-liderforte.vercel.app/"
                     target="_blank"

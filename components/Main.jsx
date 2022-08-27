@@ -86,7 +86,7 @@ const Main = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="rounded-full shadow-lg shadow-gray-500 bg-[#f07d12] p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="rounded-full shadow-lg shadow-gray-500 bg-[#f07d12] p-6 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                 <FaLinkedinIn className="text-white" />
               </div>
             </a>
@@ -95,17 +95,17 @@ const Main = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="rounded-full shadow-lg shadow-gray-500 bg-[#f07d12] p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="rounded-full shadow-lg shadow-gray-500 bg-[#f07d12] p-6 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                 <FaGithub className="text-white" />
               </div>
             </a>
             <a href="mailto:jmaz.dev@gmail.com">
-              <div className="rounded-full shadow-lg shadow-gray-500 bg-[#f07d12] p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="rounded-full shadow-lg shadow-gray-500 bg-[#f07d12] p-6 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                 <AiOutlineMail className="text-white" />
               </div>
             </a>
             <a href="tel:+55 21 96807 2492">
-              <div className="rounded-full shadow-lg bg-[#f07d12] shadow-gray-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="rounded-full shadow-lg bg-[#f07d12] shadow-gray-500 p-6 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                 <BsFillPersonLinesFill className="text-white" />
               </div>
             </a>

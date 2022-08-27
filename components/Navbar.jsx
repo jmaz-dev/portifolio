@@ -174,7 +174,7 @@ const Navbar = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                     <Fa.FaLinkedinIn className="text-[#f07d12]" />
                   </div>
                 </a>
@@ -183,17 +183,17 @@ const Navbar = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                     <Fa.FaGithub className="text-[#f07d12]" />
                   </div>
                 </a>
                 <a href="mailto:jmaz.dev@gmail.com">
-                  <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                     <Ai.AiOutlineMail className="text-[#f07d12]" />
                   </div>
                 </a>
                 <a href="tel:+55 21 96807 2492">
-                  <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                     <Bs.BsFillPersonLinesFill className="text-[#f07d12]" />
                   </div>
                 </a>
