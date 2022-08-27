@@ -19,7 +19,7 @@ const About = () => {
 
   return (
     <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
+      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8 place-items-center">
         <div className="col-span-2">
           <div data-aos="fade-up">
             <p className="uppercase text-xl tracking-widest text-[#f07d12]">
@@ -28,25 +28,18 @@ const About = () => {
             <h2 className="p-4 capitalize">{t('home:who')}</h2>
           </div>
           <div data-aos="fade-up">
-            <p className="p-2 text-gray-600">&raquo; {t('home:normal')}</p>
-            <p className="p-2 text-gray-600">{t('home:resume')}</p>
+            <p className="p-3 text-gray-600">&raquo; {t('home:normal')}</p>
+            <p className="p-3 text-gray-600">{t('home:resume')}</p>
             <Link href="/#projects">
-              <p className="py-2 text-gray-600 underline cursor-pointer">
+              <p className="p-3 text-gray-600 underline cursor-pointer">
                 {t('home:check')}
               </p>
             </Link>
           </div>
         </div>
         <div data-aos="flip-right">
-          <div className="w-ful h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 duration-300 ease-in hover:grayscale-0 grayscale">
-            <Image
-              className="rounded-xl ease-in duration-300"
-              src={AboutIMG}
-              alt="about"
-              layout='fixed'
-              height={500}
-              width={400}
-            />
+          <div className='p-4 h-[400px] w-[280px] lg:w-[300px] m-auto shadow-xl shadow-gray-400 rounded-xl lg:hover:scale-105 duration-300 ease-in'>
+            <div className="h-full rounded-xl hover:grayscale-0 lg:grayscale w-full bg-aboutImg bg-cover"></div>
           </div>
         </div>
       </div>

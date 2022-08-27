@@ -10,6 +10,7 @@ module.exports = {
         'canii': "url('/assets/frelabgcards/canicard.png')",
         'glf': "url('/assets/frelabgcards/glfcard.png')",
         'luana': "url('/assets/frelabgcards/luanacard.png')",
+        'aboutImg': "url('/assets/about.jpg')",
       },
     },
   },
