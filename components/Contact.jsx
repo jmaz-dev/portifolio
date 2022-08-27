@@ -96,7 +96,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                       <FaLinkedinIn className="text-[#f07d12]" />
                     </div>
                   </a>
@@ -105,17 +105,17 @@ const Contact = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                       <FaGithub className="text-[#f07d12]" />
                     </div>
                   </a>
                   <a href="mailto:jmaz.dev@gmail.com">
-                    <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                       <AiOutlineMail className="text-[#f07d12]" />
                     </div>
                   </a>
                   <a href="tel:+55 21 96807 2492">
-                    <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-grat-400 p-6 cursor-pointer hover:scale-110 active:scale-95 ease-in duration-200">
                       <BsFillPersonLinesFill className="text-[#f07d12]" />
                     </div>
                   </a>
@@ -188,7 +188,7 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4 hover:scale-105 ease-in duration-300">
+                <button className="w-full p-4 text-gray-100 mt-4 hover:scale-105 active:scale-95 ease-in duration-200">
                   {t("home:send")}
                 </button>
               </form>

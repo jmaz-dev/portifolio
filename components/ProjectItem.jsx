@@ -22,7 +22,7 @@ const ProjectItem = ({ title, backgroundImg, projectUrl, tech }) => {
           </h3>
           <p className="pb-4 pt-2 text-white text-center">{tech}</p>
           <Link href={projectUrl}>
-            <p className="text-center p-4 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
+            <p className="text-center p-4 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer active:scale-95 duration-200 ease-in">
               {t("home:more")}
             </p>
           </Link>

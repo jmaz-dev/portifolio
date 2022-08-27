@@ -98,7 +98,7 @@ const Projects = () => {
         </div>
         <div className="flex justify-center">
           <button
-            className="px-20 mt-10 hover:scale-110 ease-in duration-300"
+            className="px-16 py-2 mt-10 hover:scale-110 active:scale-90 ease-in duration-200"
             onClick={handleCards}
           >
             {hide ? (
