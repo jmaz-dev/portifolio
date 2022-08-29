@@ -9,7 +9,7 @@ module.exports = {
       backgroundImage: {
         'canii': "url('/assets/frelabgcards/canicard.png')",
         'glf': "url('/assets/frelabgcards/glfcard.png')",
-        'luana': "url('/assets/frelabgcards/luanacard.png')",
+        'luana': "url('/assets/frelabgcards/luanacard2.png')",
         'aboutImg': "url('/assets/about.jpg')",
       },
     },

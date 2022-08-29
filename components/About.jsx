@@ -37,9 +37,9 @@ const About = () => {
             </Link>
           </div>
         </div>
-        <div data-aos="flip-right">
+        <div data-aos="zoom-in">
           <div className='p-4 h-[400px] w-[280px] lg:w-[300px] m-auto shadow-xl shadow-gray-400 rounded-xl lg:hover:scale-105 duration-300 ease-in'>
-            <div className="h-full rounded-xl hover:grayscale-0 lg:grayscale w-full bg-aboutImg bg-cover"></div>
+            <div className="h-full rounded-xl w-full bg-aboutImg bg-cover "></div>
           </div>
         </div>
       </div>

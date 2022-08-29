@@ -73,7 +73,7 @@ const netflix = () => {
           </div>
         </div>
         <div
-          data-aos="flip-right"
+          data-aos="zoom-in"
           className="my-auto col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4"
         >
           <div className="p-2">
