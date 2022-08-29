@@ -36,7 +36,7 @@ const Projects = () => {
           <h2 className="p-4 capitalize"> {t("home:i_build")}</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
-          <div data-aos="flip-right">
+          <div data-aos="zoom-in">
             <ProjectItem
               title="Az Clothes"
               backgroundImg={azClothesImg}
@@ -44,7 +44,7 @@ const Projects = () => {
               tech={"Next.js"}
             />
           </div>
-          <div data-aos="flip-right">
+          <div data-aos="zoom-in">
             <ProjectItem
               title="ReactGram"
               backgroundImg={reactGramImg}
@@ -52,7 +52,7 @@ const Projects = () => {
               tech={"React.js / Node.js"}
             />
           </div>
-          <div data-aos="flip-right">
+          <div data-aos="zoom-in">
             <ProjectItem
               title="Netflix"
               backgroundImg={netflixImg}
@@ -60,7 +60,7 @@ const Projects = () => {
               tech={"React.js"}
             />
           </div>
-          <div data-aos="flip-right">
+          <div data-aos="zoom-in">
             <ProjectItem
               title="MiniBlog"
               backgroundImg={miniBlogImg}
@@ -71,7 +71,7 @@ const Projects = () => {
 
           <div
             className={hide ? "hidden" : "block duration-200"}
-            data-aos="flip-right"
+            data-aos="zoom-in"
           >
             <div>
               <ProjectItem
@@ -84,9 +84,9 @@ const Projects = () => {
           </div>
           <div
             className={hide ? "hidden" : "block duration-200"}
-            data-aos="flip-right"
+            data-aos="zoom-in"
           >
-            <div data-aos="flip-right">
+            <div data-aos="zoom-in">
               <ProjectItem
                 title="Freelances"
                 backgroundImg={frellaImg}
